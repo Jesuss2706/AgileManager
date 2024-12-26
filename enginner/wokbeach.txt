@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `Priority` (
   PRIMARY KEY (`idPriority`))
 ENGINE = InnoDB;
 
-
 -- -----------------------------------------------------
 -- Table `Task`
 -- -----------------------------------------------------
@@ -39,16 +38,22 @@ CREATE TABLE IF NOT EXISTS `Task` (
   `idTask` INT NOT NULL,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
-  `start_date` VARCHAR(45) NULL,
-  `end_date` VARCHAR(45) NULL,
-  `user_creator` VARCHAR(45) NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
+  `user_creator` INT NOT NULL,
   `status_idstatus` INT NOT NULL,
   `Priority_idPriority` INT NOT NULL,
   `User_idUser` INT NOT NULL,
-  PRIMARY KEY (`idTask`, `status_idstatus`, `Priority_idPriority`, `User_idUser`),
-  INDEX `fk_Task_status_idx` (`status_idstatus` ASC) ,
-  INDEX `fk_Task_Priority1_idx` (`Priority_idPriority` ASC) ,
-  INDEX `fk_Task_User1_idx` (`User_idUser` ASC) ,
+  PRIMARY KEY (`idTask`, `user_creator`, `status_idstatus`, `Priority_idPriority`, `User_idUser`),
+  INDEX `fk_Task_user_creator_idx` (`user_creator` ASC),
+  INDEX `fk_Task_status_idx` (`status_idstatus` ASC),
+  INDEX `fk_Task_Priority1_idx` (`Priority_idPriority` ASC),
+  INDEX `fk_Task_User1_idx` (`User_idUser` ASC),
+  CONSTRAINT `fk_Task_user_creator`
+    FOREIGN KEY (`user_creator`)
+    REFERENCES `User` (`idUser`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_Task_status`
     FOREIGN KEY (`status_idstatus`)
     REFERENCES `status` (`idstatus`)
@@ -63,5 +68,5 @@ CREATE TABLE IF NOT EXISTS `Task` (
     FOREIGN KEY (`User_idUser`)
     REFERENCES `User` (`idUser`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    ON UPDATE NO ACTION
+) ENGINE = InnoDB;
