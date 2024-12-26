@@ -1,0 +1,67 @@
+-- -----------------------------------------------------
+-- Table `User`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `User` (
+  `idUser` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `lastname` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `jobtitle` VARCHAR(45) NOT NULL,
+  `age` VARCHAR(45) NULL,
+  PRIMARY KEY (`idUser`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `status` (
+  `idstatus` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`idstatus`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Priority`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Priority` (
+  `idPriority` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`idPriority`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Task`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Task` (
+  `idTask` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `description` VARCHAR(45) NULL,
+  `start_date` VARCHAR(45) NULL,
+  `end_date` VARCHAR(45) NULL,
+  `user_creator` VARCHAR(45) NULL,
+  `status_idstatus` INT NOT NULL,
+  `Priority_idPriority` INT NOT NULL,
+  `User_idUser` INT NOT NULL,
+  PRIMARY KEY (`idTask`, `status_idstatus`, `Priority_idPriority`, `User_idUser`),
+  INDEX `fk_Task_status_idx` (`status_idstatus` ASC) ,
+  INDEX `fk_Task_Priority1_idx` (`Priority_idPriority` ASC) ,
+  INDEX `fk_Task_User1_idx` (`User_idUser` ASC) ,
+  CONSTRAINT `fk_Task_status`
+    FOREIGN KEY (`status_idstatus`)
+    REFERENCES `status` (`idstatus`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Task_Priority1`
+    FOREIGN KEY (`Priority_idPriority`)
+    REFERENCES `Priority` (`idPriority`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Task_User1`
+    FOREIGN KEY (`User_idUser`)
+    REFERENCES `User` (`idUser`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
