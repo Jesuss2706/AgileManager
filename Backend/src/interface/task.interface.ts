@@ -4,7 +4,7 @@ export interface ITask {
     description: string,
     start_date: string,
     end_date: string,
-    user_creator: string,
+    user_creator: number,
     status_idstatus: number,
     Priority_idPriority: number,
     User_idUser: number
