@@ -5,10 +5,12 @@ import cookiesParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import dotenv from "dotenv";
+
+//routes
 import usersRoute from "./routes/usersRoute";
+import statusRoute from "./routes/statusRoute";
 
 dotenv.config();
-
 const app = express();
 const _PORT = process.env.PORT_APPLICATION;
 
@@ -19,7 +21,7 @@ app.use(bodyParser.json());
 
 //routes
 app.use("/api/users", usersRoute);
-//app.use("/api/status", statusRoute);
+app.use("/api/status", statusRoute);
 //app.use("/api/priority", priorityRoute);
 //app.use("/api/task", taskRoute);
 
