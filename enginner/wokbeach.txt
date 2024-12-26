@@ -16,7 +16,7 @@ ENGINE = InnoDB;
 -- Table `status`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `status` (
-  `idstatus` INT NOT NULL,
+  `idstatus` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`idstatus`))
 ENGINE = InnoDB;
@@ -26,7 +26,7 @@ ENGINE = InnoDB;
 -- Table `Priority`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Priority` (
-  `idPriority` INT NOT NULL,
+  `idPriority` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`idPriority`))
 ENGINE = InnoDB;
@@ -36,7 +36,7 @@ ENGINE = InnoDB;
 -- Table `Task`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Task` (
-  `idTask` INT NOT NULL,
+  `idTask` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
   `start_date` VARCHAR(45) NULL,
