@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "681df09c-fdf0-4f67-8594-fdceae12ff89",
+		"name": "stockTaking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21163207"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"e05072003@gmail.com\",\r\n  \"password\": \"esteban\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZW1wbGVhZG8iLCJjb21wYW55IjoiR29vZ2xlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoibWUgZ3VzdGEgcHJvZ3JhbWFyIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWF0IjoxNzE5MzUyNzA2fQ.LUjiAk9a-B_S75MEsB1evQWwht8WkYq1lUJLI4xlrGY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"emanuel esteban\",\r\n    \"lastName\": \"restrepo\",\r\n    \"email\": \"e05072003@gmail.com\",\r\n    \"password\": \"$2b$10$/ZVcbLPSiVKSMj/\",\r\n    \"studentCode\": 121212,\r\n    \"username\": \"nabetse05\",\r\n    \"age\": 21,\r\n    \"staff\": \"desarrolador de software\",\r\n    \"company\": \"Siscontri Software\",\r\n    \"address\": \"carrera #5 - 22\",\r\n    \"phone\": \"3116686210\",\r\n    \"city\": \"popayan\",\r\n    \"country\": \"colombia\",\r\n    \"userInformation\": \"quiero crecer cada dia mas en esta empresa\",\r\n    \"postalCode\": 1456,\r\n    \"aboutMe\": \"ill be one the greatest\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZW1wbGVhZG8iLCJjb21wYW55IjoiR29vZ2xlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoibWUgZ3VzdGEgcHJvZ3JhbWFyIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWF0IjoxNzE5MzUyNzA2fQ.LUjiAk9a-B_S75MEsB1evQWwht8WkYq1lUJLI4xlrGY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rosa\",\r\n    \"email\": \"rosa123454@gmail.com\",\r\n    \"password\": \"rosa123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "createEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWF0IjoxNzE5NDEyMDI4fQ.WBjHyTZQ5DBTPoVl1F9jXpXUyWPU6kF1HwAMA8sLtMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ariana\",\r\n    \"lastName\": \"Andrade\",\r\n    \"email\": \"Andrade@gmail.com\",\r\n    \"password\": \"$2b$10$/ZVcbLPSiVKSMj/\",\r\n    \"username\": \"nabetse05\",\r\n    \"age\": 21,\r\n    \"staff\": \"desarrolador de software\",\r\n    \"company\": \"Siscontri Software\",\r\n    \"address\": \"carrera #5 - 22\",\r\n    \"phone\": \"3116686210\",\r\n    \"city\": \"popayan\",\r\n    \"country\": \"colombia\",\r\n    \"userInformation\": \"quiero crecer cada dia mas en esta empresa\",\r\n    \"postalCode\": 1456,\r\n    \"aboutMe\": \"ill be one the greatest\",\r\n    \"positionemployee\": \"empacador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNCIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwicG9zaXRpb25lbXBsb3llZSI6IiIsImlkX2FkbWluIjpudWxsLCJpYXQiOjE3MTk0MjkyNDB9.wTc-j5lpjrxMUIVQBCigJbQthCSixJ5pb7HdFRJKczk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWF0IjoxNzE5NDEyMDI4fQ.WBjHyTZQ5DBTPoVl1F9jXpXUyWPU6kF1HwAMA8sLtMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employees/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employees",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWF0IjoxNzE5NDEyMDI4fQ.WBjHyTZQ5DBTPoVl1F9jXpXUyWPU6kF1HwAMA8sLtMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ariana maracela\",\r\n    \"lastName\": \"Andrade\",\r\n    \"email\": \"Andrade@gmail.com\",\r\n    \"username\": \"Andrade1302\",\r\n    \"age\": 21,\r\n    \"staff\": \"desarrolador de software\",\r\n    \"company\": \"Siscontri Software\",\r\n    \"address\": \"carrera #5 - 22\",\r\n    \"phone\": \"3116686210\",\r\n    \"city\": \"popayan\",\r\n    \"country\": \"colombia\",\r\n    \"userInformation\": \"quiero crecer cada dia mas en esta empresa\",\r\n    \"postalCode\": 1456,\r\n    \"aboutMe\": \"ill be one the greatest\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employees/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employees",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWF0IjoxNzE5NDEyMDI4fQ.WBjHyTZQ5DBTPoVl1F9jXpXUyWPU6kF1HwAMA8sLtMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employees/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employees",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "spareParts",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWRfYWRtaW4iOm51bGwsImlhdCI6MTcxOTk0Mjc0Nn0.XkiazOtsabaVEOSxov40qzDfVHUMZjFv0SGNBsYUKkI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spareparts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spareparts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWRfYWRtaW4iOm51bGwsImlhdCI6MTcxOTk0Mjc0Nn0.XkiazOtsabaVEOSxov40qzDfVHUMZjFv0SGNBsYUKkI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\":\"esteban\",\r\n    \"sparePart\":\"esteban\",\r\n    \"brand\":\"esteban\",\r\n    \"code\":123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/spareparts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spareparts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtYW51ZWwgZXN0ZWJhbiIsImxhc3ROYW1lIjoicmVzdHJlcG8iLCJlbWFpbCI6ImUwNTA3MjAwM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvWlZjYkxQU2lWS1NNai8iLCJ1c2VybmFtZSI6Im5hYmV0c2UwNSIsImFnZSI6MjEsInN0YWZmIjoiZGVzYXJyb2xhZG9yIGRlIHNvZnQiLCJjb21wYW55IjoiU2lzY29udHJpIFNvZnR3YXJlIiwiYWRkcmVzcyI6ImNhcnJlcmEgIzUgLSAyMiIsInBob25lIjoiMzExNjY4NjIxMCIsImNpdHkiOiJwb3BheWFuIiwiY291bnRyeSI6ImNvbG9tYmlhIiwidXNlckluZm9ybWF0aW9uIjoicXVpZXJvIGNyZWNlciBjYWRhIGRpYSBtYXMgZW4gZXN0YSBlbXByZXNhIiwicG9zdGFsQ29kZSI6MTQ1NiwiYWJvdXRNZSI6ImlsbCBiZSBvbmUgdGhlIGdyZWF0ZXN0IiwiaWRfYWRtaW4iOm51bGwsImlhdCI6MTcxOTk0Mjc0Nn0.XkiazOtsabaVEOSxov40qzDfVHUMZjFv0SGNBsYUKkI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spareparts/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spareparts",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventary",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsIm5hbWUiOiJmZXJuYW5kbyIsImxhc3ROYW1lIjpudWxsLCJlbWFpbCI6ImZlcm5hbmRvQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFROWXY1enhIdDU5QzhZdSIsInVzZXJuYW1lIjpudWxsLCJhZ2UiOm51bGwsInN0YWZmIjpudWxsLCJjb21wYW55IjpudWxsLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiY291bnRyeSI6bnVsbCwidXNlckluZm9ybWF0aW9uIjpudWxsLCJwb3N0YWxDb2RlIjpudWxsLCJhYm91dE1lIjpudWxsLCJpZF9hZG1pbiI6bnVsbCwiaWF0IjoxNzE5OTQ5NTI5fQ.zOmWUzy-jbwchFp0AWBMyhR_taIrgSVHgyLF5f1h0Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/inventories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsIm5hbWUiOiJmZXJuYW5kbyIsImxhc3ROYW1lIjpudWxsLCJlbWFpbCI6ImZlcm5hbmRvQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFROWXY1enhIdDU5QzhZdSIsInVzZXJuYW1lIjpudWxsLCJhZ2UiOm51bGwsInN0YWZmIjpudWxsLCJjb21wYW55IjpudWxsLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiY291bnRyeSI6bnVsbCwidXNlckluZm9ybWF0aW9uIjpudWxsLCJwb3N0YWxDb2RlIjpudWxsLCJhYm91dE1lIjpudWxsLCJpZF9hZG1pbiI6bnVsbCwiaWF0IjoxNzE5OTQ5NTI5fQ.zOmWUzy-jbwchFp0AWBMyhR_taIrgSVHgyLF5f1h0Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sparePart\": 4,\r\n    \"value\": \"17000\",\r\n    \"date\": \"2024-07-01T16:46:11.000Z\",\r\n    \"saleDate\": \"2024-07-10T16:46:11.000Z\",\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/inventories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsIm5hbWUiOiJmZXJuYW5kbyIsImxhc3ROYW1lIjpudWxsLCJlbWFpbCI6ImZlcm5hbmRvQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFROWXY1enhIdDU5QzhZdSIsInVzZXJuYW1lIjpudWxsLCJhZ2UiOm51bGwsInN0YWZmIjpudWxsLCJjb21wYW55IjpudWxsLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiY291bnRyeSI6bnVsbCwidXNlckluZm9ybWF0aW9uIjpudWxsLCJwb3N0YWxDb2RlIjpudWxsLCJhYm91dE1lIjpudWxsLCJpZF9hZG1pbiI6bnVsbCwiaWF0IjoxNzE5OTQ5NTI5fQ.zOmWUzy-jbwchFp0AWBMyhR_taIrgSVHgyLF5f1h0Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sparePart\": 4,\r\n    \"value\": \"17000\",\r\n    \"date\": \"2024-07-01T16:46:11.000Z\",\r\n    \"saleDate\": \"2024-07-10T16:46:11.000Z\",\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/inventories/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsIm5hbWUiOiJmZXJuYW5kbyIsImxhc3ROYW1lIjpudWxsLCJlbWFpbCI6ImZlcm5hbmRvQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFROWXY1enhIdDU5QzhZdSIsInVzZXJuYW1lIjpudWxsLCJhZ2UiOm51bGwsInN0YWZmIjpudWxsLCJjb21wYW55IjpudWxsLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiY291bnRyeSI6bnVsbCwidXNlckluZm9ybWF0aW9uIjpudWxsLCJwb3N0YWxDb2RlIjpudWxsLCJhYm91dE1lIjpudWxsLCJpZF9hZG1pbiI6bnVsbCwiaWF0IjoxNzE5OTQ5NTI5fQ.zOmWUzy-jbwchFp0AWBMyhR_taIrgSVHgyLF5f1h0Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/inventories/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
