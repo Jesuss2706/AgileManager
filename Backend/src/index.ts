@@ -7,8 +7,10 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 //routes
+import priorityRoute from "./routes/priorityRoute"
 import usersRoute from "./routes/usersRoute";
 import statusRoute from "./routes/statusRoute";
+import taskRoute from "./routes/taskRoute";
 
 dotenv.config();
 const app = express();
@@ -22,8 +24,8 @@ app.use(bodyParser.json());
 //routes
 app.use("/api/users", usersRoute);
 app.use("/api/status", statusRoute);
-//app.use("/api/priority", priorityRoute);
-//app.use("/api/task", taskRoute);
+app.use("/api/priority", priorityRoute);
+app.use("/api/task", taskRoute);
 
 app.use(express.static("public"));
 
