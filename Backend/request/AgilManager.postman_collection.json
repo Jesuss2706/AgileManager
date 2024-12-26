@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "315eb7cb-9e28-4576-be62-87392537c08f",
+		"_postman_id": "5d32851a-656d-4385-bb52-c0ad8449f5e8",
 		"name": "AgilManager",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21163207"
+		"_exporter_id": "40523516"
 	},
 	"item": [
 		{
@@ -134,11 +134,255 @@
 		},
 		{
 			"name": "priority",
-			"item": []
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/priority",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"priority"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/priority/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"priority",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Super low\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/priority",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"priority"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"created2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/priority/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"priority",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/priority/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"priority",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "task",
-			"item": []
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/task/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"task",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"jugar\",\r\n    \"description\": \"jugar 3 horas\",\r\n    \"start_date\": \"2024-08-01\",\r\n    \"end_date\": \"2024-11-31\",\r\n    \"user_creator\": \"1\",\r\n    \"status_idstatus\": 2,\r\n    \"Priority_idPriority\": 2,\r\n    \"User_idUser\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"jugar\",\r\n    \"description\": \"jugar 5 horas\",\r\n    \"start_date\": \"2024-08-01\",\r\n    \"end_date\": \"2024-11-31\",\r\n    \"user_creator\": \"1\",\r\n    \"status_idstatus\": 2,\r\n    \"Priority_idPriority\": 2,\r\n    \"User_idUser\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/task/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"task",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/task/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"task",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "status",
@@ -169,7 +413,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/status/0",
+							"raw": "http://localhost:3000/api/status/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -178,7 +422,7 @@
 							"path": [
 								"api",
 								"status",
-								"0"
+								"1"
 							]
 						}
 					},
@@ -191,7 +435,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idstatus\": 1,\r\n    \"name\": \"finalizado\"\r\n}",
+							"raw": "{\r\n    \"name\": \"iniciado\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,7 +464,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"created\"\r\n}",
+							"raw": "{\r\n    \"name\": \"created2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -228,7 +472,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/status/0",
+							"raw": "http://localhost:3000/api/status/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -237,7 +481,7 @@
 							"path": [
 								"api",
 								"status",
-								"0"
+								"1"
 							]
 						}
 					},
