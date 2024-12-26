@@ -5,7 +5,7 @@ import cookiesParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import dotenv from "dotenv";
-import employeesRoute from "./routes/EmployeesRoute";
+import usersRoute from "./routes/usersRoute";
 
 dotenv.config();
 
@@ -18,7 +18,11 @@ app.use(cookiesParser());
 app.use(bodyParser.json());
 
 //routes
-app.use("/api/users", employeesRoute);
+app.use("/api/users", usersRoute);
+//app.use("/api/status", statusRoute);
+//app.use("/api/priority", priorityRoute);
+//app.use("/api/task", taskRoute);
+
 app.use(express.static("public"));
 
 const server = http.createServer(app);

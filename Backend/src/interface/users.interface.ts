@@ -1,7 +1,8 @@
 export interface IUsers {
-    id: number,
+    idUser: number,
     name: string,
-    lastName: string,
+    lastname: string,
     email: string,
     jobtitle: string,
+    age: string
 }
