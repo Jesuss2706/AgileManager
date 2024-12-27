@@ -34,9 +34,9 @@
             <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="form-group">
-                  <label class="form-control-label fw-bold" for="input-email">Name</label>
+                  <label class="form-control-label fw-bold" for="input-email">Name Task</label>
                   <input type="text" id="input-email" class="form-control form-control-alternative"
-                    placeholder="Enter your Name" formControlName="name">
+                    placeholder="Enter Name Task" formControlName="name">
                   <div *ngIf="getControl('name').invalid && ngForm.submitted" class="text-left">
                     <label class="text-danger text-xs">Es requerido o invalido</label>
                   </div>
@@ -59,16 +59,49 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+                <label for="inputState" class="form-label text-dark">Creador</label>
+                <select class="form-select" formControlName="user_creator">
+                  <ng-container *ngFor="let user of this.users">
+                    <option [value]="user.idUser">{{user.name}}</option>
+                  </ng-container>
+                </select>
+                <div *ngIf="getControl('user_creator').invalid && ngForm.submitted" class="text-left">
+                  <label class="text-danger text-xs">Es requerido o invalido</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <label for="inputState" class="form-label text-dark">Status</label>
+                <select class="form-select" formControlName="status_idstatus">
+                  <ng-container *ngFor="let statu of this.status">
+                    <option [value]="statu.idstatus">{{statu.name}}</option>
+                  </ng-container>
+                </select>
+                <div *ngIf="getControl('status_idstatus').invalid && ngForm.submitted" class="text-left">
+                  <label class="text-danger text-xs">Es requerido o invalido</label>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <label for="inputState" class="form-label text-dark">Priorities</label>
+                <select class="form-select" formControlName="Priority_idPriority">
+                  <ng-container *ngFor="let priority of this.priorities">
+                    <option [value]="priority.idPriority">{{priority.name}}</option>
+                  </ng-container>
+                </select>
+                <div *ngIf="getControl('Priority_idPriority').invalid && ngForm.submitted" class="text-left">
+                  <label class="text-danger text-xs">Es requerido o invalido</label>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <label for="inputState" class="form-label text-dark">User asinged</label>
+                <select class="form-select" formControlName="User_idUser">
+                  <ng-container *ngFor="let user of this.users">
+                    <option [value]="user.idUser">{{user.name}}</option>
+                  </ng-container>
+                </select>
+                <div *ngIf="getControl('User_idUser').invalid && ngForm.submitted" class="text-left">
+                  <label class="text-danger text-xs">Es requerido o invalido</label>
                 </div>
               </div>
             </div>
@@ -76,8 +109,8 @@
               <div class="col-lg-8 col-md-8 col-sm-12 mt-3">
                 <label class="form-control-label fw-bold" for="input-email">Description</label>
                 <textarea type="text" rows="5" id="input-email" class="form-control form-control-alternative"
-                  placeholder="Enter description task" formControlName="lastname"></textarea>
-                <div *ngIf="getControl('lastname').invalid && ngForm.submitted" class="text-left">
+                  placeholder="Enter description task" formControlName="description"></textarea>
+                <div *ngIf="getControl('description').invalid && ngForm.submitted" class="text-left">
                   <label class="text-danger text-xs">Es requerido o invalido</label>
                 </div>
               </div>

@@ -8,4 +8,8 @@ export interface ITask {
   status_idstatus: number;
   Priority_idPriority: number;
   User_idUser: number;
+  priorityName: string;
+  statusName: string;
+  creatorName: string;
+  userAsinged: string;
 }

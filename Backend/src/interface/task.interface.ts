@@ -7,6 +7,10 @@ export interface ITask {
     user_creator: number,
     status_idstatus: number,
     Priority_idPriority: number,
-    User_idUser: number
+    User_idUser: number,
+    priorityName: string,
+    statusName: string,
+    creatorName: string,
+    userAsinged: string,
 }
 

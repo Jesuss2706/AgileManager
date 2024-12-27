@@ -44,15 +44,15 @@
                                   <td> {{ task.description }}</td>
                                   <td> {{ task.start_date | date: 'dd/MM/yyyy' }}</td>
                                   <td> {{ task.end_date | date: 'dd/MM/yyyy' }}</td>
-                                  <td> {{ task.user_creator }}</td>
-                                  <td> {{ task.status_idstatus }}</td>
-                                  <td> {{ task.Priority_idPriority }}</td>
-                                  <td> {{ task.User_idUser }}</td>
+                                  <td> {{ task.creatorName }}</td>
+                                  <td> {{ task.statusName }}</td>
+                                  <td> {{ task.priorityName }}</td>
+                                  <td> {{ task.userAsinged }}</td>
                                   <td>
                                       <div class="btn-group" role="group" aria-label="Acciones">
                                           <div class="btn-group" role="group" aria-label="Editar">
                                               <button type="button" class="btn btn-sm bg-white"
-                                                  (click)="this.route.navigate(['/tasks/update/', list.idTask])">
+                                                  (click)="this.route.navigate(['/tasks/update/', task.idTask])">
                                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                       fill="currentColor" class="text-primary bi bi-brush"
                                                       viewBox="0 0 16 16">
@@ -63,7 +63,7 @@
                                           </div>
                                           <div class="btn-group" role="group" aria-label="Eliminar">
                                               <button type="button" class="btn btn-sm bg-white"
-                                                  (click)="this.delete(list.idTask)">
+                                                  (click)="this.delete(task.idTask)">
                                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                       fill="currentColor" class="text-danger bi bi-eraser"
                                                       viewBox="0 0 16 16">
