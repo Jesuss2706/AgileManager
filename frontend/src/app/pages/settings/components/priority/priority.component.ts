@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { BaseComponent } from 'src/app/shared/core/base.component';
 import { IPriority } from 'src/app/shared/interface/IdName.interface';
 import { PriorityService } from 'src/app/shared/services/priority.service';
+import { PrincipalNames } from 'src/app/shared/interface/IdName.interface';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { PriorityService } from 'src/app/shared/services/priority.service';
 export class PriorityComponent extends BaseComponent implements OnInit {
 
   public lists: IPriority[] = [];
+  public principalName = PrincipalNames;
 
   constructor(
     public route: Router,

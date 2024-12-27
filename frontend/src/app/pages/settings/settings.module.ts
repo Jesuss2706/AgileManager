@@ -6,6 +6,7 @@ import { SettingsComponent } from './settings.component';
 import { StatusComponent } from './components/status/status.component';
 import { PriorityComponent } from './components/priority/priority.component';
 import { IdNameManagerComponent } from './components/id-name-manager/id-name-manager.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { IdNameManagerComponent } from './components/id-name-manager/id-name-man
   ],
   imports: [
     CommonModule,
-    SettingsRoutingModule
+    SettingsRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class SettingsModule { }

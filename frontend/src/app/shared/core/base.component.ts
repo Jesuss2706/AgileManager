@@ -6,7 +6,6 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 
 @Component({ template: '' })
 export class BaseComponent {
-
   public form!: FormGroup;
   public apiUrl = environment.app.apiBaseUrl;
 
@@ -14,7 +13,7 @@ export class BaseComponent {
   public selected$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   public modalDisplay$: BehaviorSubject<any> = new BehaviorSubject<any>("none");
   public subscription!: Subscription;
-  public idModal: number;
+  public idModal: number = null;
 
   constructor() { }
 
@@ -36,7 +35,8 @@ export class BaseComponent {
     Swal.fire({ title: 'Success!', text: message, icon: 'success' });
   }
 
-  openModal(event: any) {
+  openModal(event: any, id?: number) {
+    this.idModal = id;
     this.selected$.next({ event })
     this.modalDisplay$.next("block");
   }

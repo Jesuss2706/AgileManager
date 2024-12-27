@@ -5,6 +5,7 @@
     </div>
   </div>
 </div>
+
 <!-- Page content -->
 <div class="container-fluid mt--7">
   <!-- Table -->
@@ -39,7 +40,7 @@
                   <td>
                     <div class="btn-group" role="group" aria-label="Acciones">
                       <div class="btn-group" role="group" aria-label="Editar">
-                        <button type="button" class="btn btn-sm bg-white" (click)="this.openModal($event); this.idModal = list.id">
+                        <button type="button" class="btn btn-sm bg-white" (click)="this.openModal($event, list.idstatus);">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="text-primary bi bi-brush" viewBox="0 0 16 16">
                             <path
@@ -48,7 +49,7 @@
                         </button>
                       </div>
                       <div class="btn-group" role="group" aria-label="Eliminar">
-                        <button type="button" class="btn btn-sm bg-white" (click)="this.delete(list.idUser)">
+                        <button type="button" class="btn btn-sm bg-white" (click)="this.delete(list.idstatus)">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="text-danger bi bi-eraser" viewBox="0 0 16 16">
                             <path

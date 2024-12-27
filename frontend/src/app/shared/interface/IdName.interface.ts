@@ -8,5 +8,5 @@ export interface IPriority extends IdName { }
 
 export enum PrincipalNames {
   First = 'Status',
-  second = 'Priority'
+  Second = 'Priority'
 }
