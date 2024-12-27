@@ -42,8 +42,8 @@
                               <tr *ngFor="let task of this.tasks">
                                   <td> {{ task.name }}</td>
                                   <td> {{ task.description }}</td>
-                                  <td> {{ task.start_date }}</td>
-                                  <td> {{ task.end_date }}</td>
+                                  <td> {{ task.start_date | date: 'dd/MM/yyyy' }}</td>
+                                  <td> {{ task.end_date | date: 'dd/MM/yyyy' }}</td>
                                   <td> {{ task.user_creator }}</td>
                                   <td> {{ task.status_idstatus }}</td>
                                   <td> {{ task.Priority_idPriority }}</td>
