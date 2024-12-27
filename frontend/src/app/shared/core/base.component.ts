@@ -11,9 +11,10 @@ export class BaseComponent {
   public apiUrl = environment.app.apiBaseUrl;
 
   //modal
-  selected$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  modalDisplay$: BehaviorSubject<any> = new BehaviorSubject<any>("none");
-  subscription!: Subscription;
+  public selected$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  public modalDisplay$: BehaviorSubject<any> = new BehaviorSubject<any>("none");
+  public subscription!: Subscription;
+  public idModal: number;
 
   constructor() { }
 

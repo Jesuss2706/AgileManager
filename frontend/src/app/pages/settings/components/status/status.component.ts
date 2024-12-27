@@ -2,7 +2,7 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BaseComponent } from 'src/app/shared/core/base.component';
-import { IStatus } from 'src/app/shared/interface/IdName.interface';
+import { IStatus, PrincipalNames } from 'src/app/shared/interface/IdName.interface';
 import { StatusService } from 'src/app/shared/services/status.service';
 
 @Component({
@@ -12,6 +12,7 @@ import { StatusService } from 'src/app/shared/services/status.service';
 })
 export class StatusComponent extends BaseComponent implements OnInit {
   public lists: IStatus[] = [];
+  public principalName = PrincipalNames;
 
   constructor(
     public route: Router,
@@ -36,4 +37,5 @@ export class StatusComponent extends BaseComponent implements OnInit {
   private async getAll(): Promise<void> {
     this.lists = (await this.statusService.getAll()).reverse();
   }
+
 }
